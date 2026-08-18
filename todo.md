@@ -29,3 +29,4 @@
 - [x] Add an isolated Vitest workflow test for candidate intake success and failure paths around upload metadata, extraction, matching, and notification logging.
 - [x] Capture and document the dashboard route at mobile width.
 - [x] Reconfirm the mobile candidates route with both standard and full-page captures before final release.
+- [ ] Create a new private GitHub repository and push the current reviewed project state to it.
