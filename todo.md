@@ -1,0 +1,31 @@
+# Project TODO
+
+- [x] Define the recruitment workflow, user roles, and integration boundaries for the MVP.
+- [x] Create database tables and migrations for jobs, candidates, candidate skills, CV files, match results, and notifications.
+- [x] Create type-safe server procedures and database helpers for jobs, candidates, matches, exports, and notifications.
+- [x] Build an RTL administrative dashboard shell with responsive navigation and polished visual system.
+- [x] Build a jobs management screen with create, edit, delete, search, and status controls.
+- [x] Build a candidates management screen with full candidate data, CV status, matching results, and pipeline status.
+- [x] Build CSV-compatible export for candidate and job records.
+- [x] Build a WhatsApp-style conversational intake experience that gathers all specified candidate answers.
+- [x] Add PDF and Word CV upload with secure storage metadata linked to a candidate.
+- [x] Implement deterministic job matching based on title, location, salary expectations, experience, and notice period.
+- [x] Display ranked matching jobs in the conversation and send the selected job description and application link within the conversation.
+- [x] Integrate structured CV data extraction using a language model for title, experience, and skills.
+- [x] Notify the administrator when a new candidate registers or uploads a CV.
+- [x] Add authorization checks and robust empty, loading, validation, and error states.
+- [x] Add Vitest coverage for core matching, validation, and server workflows.
+- [x] Verify responsive visual design across dashboard, candidates, jobs, and conversation views.
+- [x] Create a release checkpoint and prepare the MVP for user review.
+- [x] Add a visible Arabic/English language switch with automatic RTL/LTR direction and translated interface strings across administrative and candidate-facing views.
+- [x] Add a dedicated candidate-skills table, CV file-record table, and notification-log table, while preserving existing candidate records.
+- [x] Add a typed notification-log helper and persist successful administrator alert events.
+- [x] Add server-side jobs search and connect it to a visible search input in the jobs screen.
+- [x] Add explicit query-error states across dashboard, jobs, candidates, and candidate-detail screens.
+- [x] Add input-validation and candidate-intake workflow coverage to the Vitest suite.
+- [x] Complete English translations for matching reasons, export headers, and server-side candidate-intake messages.
+- [x] Verify the dashboard, jobs, and candidates screens at desktop and mobile widths.
+- [x] Confirm the mobile candidates view has no horizontal clipping in both viewport and full-page captures, then close the verification task.
+- [x] Add an isolated Vitest workflow test for candidate intake success and failure paths around upload metadata, extraction, matching, and notification logging.
+- [x] Capture and document the dashboard route at mobile width.
+- [x] Reconfirm the mobile candidates route with both standard and full-page captures before final release.

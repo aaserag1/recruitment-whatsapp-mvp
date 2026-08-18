@@ -2,15 +2,24 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import DashboardLayout from "./components/DashboardLayout";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import CandidateChatPage from "./pages/CandidateChatPage";
+import CandidateDetailPage from "./pages/CandidateDetailPage";
+import CandidatesPage from "./pages/CandidatesPage";
+import DashboardPage from "./pages/DashboardPage";
+import JobsPage from "./pages/JobsPage";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/candidate-chat"} component={CandidateChatPage} />
+      <Route path={"/"}><DashboardLayout><DashboardPage /></DashboardLayout></Route>
+      <Route path={"/jobs"}><DashboardLayout><JobsPage /></DashboardLayout></Route>
+      <Route path={"/candidates/:id"}><DashboardLayout><CandidateDetailPage /></DashboardLayout></Route>
+      <Route path={"/candidates"}><DashboardLayout><CandidatesPage /></DashboardLayout></Route>
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -30,10 +39,12 @@ function App() {
         defaultTheme="light"
         // switchable
       >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
