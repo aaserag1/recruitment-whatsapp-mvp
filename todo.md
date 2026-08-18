@@ -30,3 +30,4 @@
 - [x] Capture and document the dashboard route at mobile width.
 - [x] Reconfirm the mobile candidates route with both standard and full-page captures before final release.
 - [x] Create a new private GitHub repository and push the current reviewed project state to it.
+- [x] Add a professional project README with setup, architecture, workflow, and current integration boundaries.
